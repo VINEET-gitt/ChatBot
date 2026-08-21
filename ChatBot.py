@@ -10,7 +10,7 @@ if "chat_history" not in st.session_state:
 
 def ask_ai(messages):
     response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="qwen/qwen3.6-27b",
         messages=messages
     )
     return response.choices[0].message.content
